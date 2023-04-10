@@ -5,8 +5,13 @@ import '../extensions/material_state_extension.dart';
 class TextFieldOutlineBorder extends MaterialStateOutlineInputBorder {
   final Color color;
   final Color error;
+  final BorderRadius radius;
 
-  const TextFieldOutlineBorder({required this.color, required this.error});
+  const TextFieldOutlineBorder({
+    required this.color,
+    required this.error,
+    this.radius = const BorderRadius.all(Radius.circular(24.0)),
+  });
 
   @override
   InputBorder resolve(Set<MaterialState> states) {
@@ -20,10 +25,7 @@ class TextFieldOutlineBorder extends MaterialStateOutlineInputBorder {
       side = side.copyWith(color: error);
     }
 
-    return OutlineInputBorder(
-      borderRadius: const BorderRadius.all(Radius.circular(24.0)),
-      borderSide: side,
-    );
+    return OutlineInputBorder(borderRadius: radius, borderSide: side);
   }
 }
 
