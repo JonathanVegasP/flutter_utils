@@ -161,5 +161,7 @@ ThemeData generateTheme({
       floatingLabelStyle: label,
     ),
     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
+    disabledColor: onBackground.withOpacity(0.12),
+    bottomAppBarTheme: BottomAppBarTheme(color: primary),
   );
 }
