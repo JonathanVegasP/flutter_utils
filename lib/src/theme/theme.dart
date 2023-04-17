@@ -50,6 +50,7 @@ ThemeData generateTheme({
       displayLarge: TextStyle(
         inherit: false,
         fontSize: 64,
+        height: 1.125,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -57,6 +58,7 @@ ThemeData generateTheme({
       displayMedium: TextStyle(
         inherit: false,
         fontSize: 56,
+        height: 1.1428,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -64,6 +66,7 @@ ThemeData generateTheme({
       displaySmall: TextStyle(
         inherit: false,
         fontSize: 48,
+        height: 1.1666,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -71,6 +74,7 @@ ThemeData generateTheme({
       headlineLarge: TextStyle(
         inherit: false,
         fontSize: 40,
+        height: 1.2,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -78,6 +82,7 @@ ThemeData generateTheme({
       headlineMedium: TextStyle(
         inherit: false,
         fontSize: 32,
+        height: 1.25,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -85,6 +90,7 @@ ThemeData generateTheme({
       headlineSmall: TextStyle(
         inherit: false,
         fontSize: 24,
+        height: 1.3333,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -92,6 +98,7 @@ ThemeData generateTheme({
       titleLarge: TextStyle(
         inherit: false,
         fontSize: 20,
+        height: 1.2,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -99,6 +106,7 @@ ThemeData generateTheme({
       titleMedium: TextStyle(
         inherit: false,
         fontSize: 16,
+        height: 1.50,
         fontWeight: FontWeight.w500,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -106,6 +114,7 @@ ThemeData generateTheme({
       titleSmall: TextStyle(
         inherit: false,
         fontSize: 14,
+        height: 1.5714,
         fontWeight: FontWeight.w500,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -114,12 +123,14 @@ ThemeData generateTheme({
         inherit: false,
         fontSize: 16,
         fontWeight: FontWeight.w400,
+        height: 1.5,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
       ),
       bodyMedium: TextStyle(
         inherit: false,
         fontSize: 14,
+        height: 1.5714,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -127,6 +138,7 @@ ThemeData generateTheme({
       bodySmall: TextStyle(
         inherit: false,
         fontSize: 12,
+        height: 1.3333,
         fontWeight: FontWeight.w400,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -134,6 +146,7 @@ ThemeData generateTheme({
       labelLarge: TextStyle(
         inherit: false,
         fontSize: 16,
+        height: 1.50,
         fontWeight: FontWeight.w500,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -141,6 +154,7 @@ ThemeData generateTheme({
       labelMedium: TextStyle(
         inherit: false,
         fontSize: 14,
+        height: 1.5714,
         fontWeight: FontWeight.w500,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
@@ -148,6 +162,7 @@ ThemeData generateTheme({
       labelSmall: TextStyle(
         inherit: false,
         fontSize: 12,
+        height: 1.3333,
         fontWeight: FontWeight.w500,
         textBaseline: TextBaseline.alphabetic,
         leadingDistribution: TextLeadingDistribution.even,
