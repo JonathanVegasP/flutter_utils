@@ -16,6 +16,9 @@ ThemeData generateTheme({
   BorderRadius textFieldRadius = const BorderRadius.all(Radius.circular(24.0)),
   bool isTextFieldFilled = false,
   bool isTextFieldDense = false,
+  Size minimumButtonSize = const Size(40, 40),
+  Size maximumButtonSize = const Size(double.infinity, 40),
+  OutlinedBorder buttonShape = const StadiumBorder(),
 }) {
   final padding = textFieldBorderConstructor == TextFieldOutlineBorder.new
       ? const EdgeInsets.symmetric(horizontal: 8, vertical: 16)
@@ -163,5 +166,40 @@ ThemeData generateTheme({
     materialTapTargetSize: MaterialTapTargetSize.shrinkWrap,
     disabledColor: onBackground.withOpacity(0.12),
     bottomAppBarTheme: BottomAppBarTheme(color: primary),
+    elevatedButtonTheme: ElevatedButtonThemeData(
+      style: ElevatedButton.styleFrom(
+        minimumSize: minimumButtonSize,
+        maximumSize: maximumButtonSize,
+        shape: buttonShape,
+        backgroundColor: primary,
+        foregroundColor: surface,
+      ),
+    ),
+    filledButtonTheme: FilledButtonThemeData(
+      style: FilledButton.styleFrom(
+        minimumSize: minimumButtonSize,
+        maximumSize: maximumButtonSize,
+        shape: buttonShape,
+        backgroundColor: primary,
+        foregroundColor: surface,
+      ),
+    ),
+    outlinedButtonTheme: OutlinedButtonThemeData(
+      style: OutlinedButton.styleFrom(
+        minimumSize: minimumButtonSize,
+        maximumSize: maximumButtonSize,
+        shape: buttonShape,
+        side: BorderSide(color: primary),
+        foregroundColor: primary,
+      ),
+    ),
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        minimumSize: minimumButtonSize,
+        maximumSize: maximumButtonSize,
+        foregroundColor: primary,
+        shape: buttonShape,
+      ),
+    ),
   );
 }
