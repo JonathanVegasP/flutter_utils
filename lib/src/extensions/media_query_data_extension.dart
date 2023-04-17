@@ -34,8 +34,6 @@ extension MediaQueryDataExt on MediaQueryData {
   }
 
   EdgeInsetsGeometry get widgetPadding {
-    return isCompact
-        ? const EdgeInsets.symmetric(horizontal: 16)
-        : const EdgeInsets.symmetric(horizontal: 24);
+    return isCompact ? const EdgeInsets.all(16) : const EdgeInsets.all(24);
   }
 }
