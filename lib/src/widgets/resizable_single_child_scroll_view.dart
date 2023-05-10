@@ -13,9 +13,7 @@ class ResizableSingleChildScrollView extends StatelessWidget {
         builder: (context, view) {
           return ConstrainedBox(
             constraints: BoxConstraints(minHeight: view.maxHeight),
-            child: IntrinsicHeight(
-              child: child,
-            ),
+            child: IntrinsicHeight(child: child),
           );
         },
       ),

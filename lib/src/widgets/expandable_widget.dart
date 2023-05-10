@@ -41,18 +41,26 @@ class _ExpandableWidgetState extends State<ExpandableWidget>
   void _listener() {
     final value = isActive;
 
-    if (value) {
-      controller.forward();
-    } else {
-      controller.reverse();
+    switch (value) {
+      case true:
+        controller.forward();
+      default:
+        controller.reverse();
     }
+  }
+
+  static void _fn() {}
+
+  @override
+  void setState([VoidCallback fn = _fn]) {
+    super.setState(fn);
   }
 
   @override
   void initState() {
     super.initState();
 
-    controller.addListener(() => setState(() {}));
+    controller.addListener(setState);
 
     widget.controller.addListener(_listener);
 
@@ -118,10 +126,11 @@ extension ExpandableWidgetExt on _ExpandableWidgetState {
           : null;
 
   void _init() {
-    if (isActive) {
-      controller.value = 1.0;
-    } else {
-      controller.value = 0.0;
+    switch (isActive) {
+      case true:
+        controller.value = 1.0;
+      default:
+        controller.value = 0.0;
     }
   }
 }

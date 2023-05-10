@@ -1,7 +1,7 @@
 import 'package:flutter/widgets.dart';
 
-import 'build_context_extension.dart';
-import 'media_query_data_extension.dart';
+import 'build_context_extensions.dart';
+import 'media_query_data_extensions.dart';
 
 extension MarginExtension<T> on T {
   Widget verticalMargin() {
