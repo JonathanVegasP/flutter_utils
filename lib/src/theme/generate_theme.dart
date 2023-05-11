@@ -19,9 +19,10 @@ ThemeData generateTheme({
   Size maximumButtonSize = const Size(double.infinity, 40),
   OutlinedBorder buttonShape = const StadiumBorder(),
 }) {
-  final padding = isTextFieldOutlined
-      ? const EdgeInsets.symmetric(horizontal: 8, vertical: 16)
-      : const EdgeInsets.symmetric(vertical: 8);
+  final padding = switch (isTextFieldOutlined) {
+    true => const EdgeInsets.symmetric(horizontal: 8, vertical: 16),
+    _ => const EdgeInsets.symmetric(vertical: 8)
+  };
   final border = TextFieldInputBorderTheme(
     color: primary,
     error: error,

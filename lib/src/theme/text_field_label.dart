@@ -30,7 +30,7 @@ class TextFieldLabel extends MaterialStateTextStyle {
     }
 
     return TextStyle(
-      color: states.isError ? error : labelColor,
+      color: switch (states.isError) { true => error, _ => labelColor },
       fontSize: fontSize,
       fontWeight: fontWeight,
     );

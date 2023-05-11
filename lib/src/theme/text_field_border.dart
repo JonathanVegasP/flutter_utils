@@ -24,8 +24,8 @@ class TextFieldInputBorderTheme extends TextFieldInputBorder {
   @override
   InputBorder resolve(Set<MaterialState> states) {
     final side = BorderSide(
-      color: states.isError ? error : color,
-      width: states.hasAnyFocus ? 2 : 1,
+      color: switch (states.isError) { true => error, _ => color },
+      width: switch (states.hasAnyFocus) { true => 2, _ => 1 },
     );
 
     return switch (isOutlined) {

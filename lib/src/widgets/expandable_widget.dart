@@ -109,21 +109,27 @@ class _ExpandableWidgetState extends State<ExpandableWidget>
 
 // ignore: library_private_types_in_public_api
 extension ExpandableWidgetExt on _ExpandableWidgetState {
-  bool get isActive => widget.type == ExpandableType.forwarded
-      ? widget.controller.value
-      : !widget.controller.value;
+  bool get isActive => switch (widget.type == ExpandableType.forwarded) {
+        true => widget.controller.value,
+        _ => !widget.controller.value
+      };
 
-  bool get isVisible => controller.isAnimating ? true : isActive;
+  bool get isVisible {
+    return switch (controller.isAnimating) { true => true, _ => isActive };
+  }
 
-  double? get heightFactor =>
-      widget.orientation == ExpandableOrientation.vertical
-          ? animation.value
-          : null;
+  double? get heightFactor {
+    return switch (widget.orientation == ExpandableOrientation.vertical) {
+      true => animation.value,
+      _ => null
+    };
+  }
 
   double? get widthFactor =>
-      widget.orientation == ExpandableOrientation.horizontal
-          ? animation.value
-          : null;
+      switch (widget.orientation == ExpandableOrientation.horizontal) {
+        true => animation.value,
+        _ => null
+      };
 
   void _init() {
     switch (isActive) {
