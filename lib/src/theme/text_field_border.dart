@@ -2,19 +2,13 @@ import 'package:flutter/material.dart';
 
 import '../extensions/material_state_extensions.dart';
 
-abstract class TextFieldInputBorder extends OutlineInputBorder
-    implements MaterialStateProperty<InputBorder> {
-  @override
-  InputBorder resolve(Set<MaterialState> states);
-}
-
-class TextFieldInputBorderTheme extends TextFieldInputBorder {
+class TextFieldInputBorderTheme extends MaterialStateOutlineInputBorder {
   final Color color;
   final Color error;
   final BorderRadius radius;
   final bool isOutlined;
 
-  TextFieldInputBorderTheme({
+  const TextFieldInputBorderTheme({
     required this.color,
     required this.error,
     this.radius = const BorderRadius.all(Radius.circular(24.0)),

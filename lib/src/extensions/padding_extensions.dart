@@ -1,14 +1,14 @@
 import 'package:flutter/widgets.dart';
 
 import 'build_context_extensions.dart';
-import 'media_query_data_extensions.dart';
+import 'size_extensions.dart';
 
 extension PaddingExt on Widget {
   Widget get verticalPadding {
     return Builder(builder: (context) {
-      final mediaQuery = context.mediaQuery;
+      final screenSize = context.screenSize;
       return Padding(
-        padding: mediaQuery.verticalPadding,
+        padding: screenSize.verticalPadding,
         child: this,
       );
     });
@@ -16,9 +16,9 @@ extension PaddingExt on Widget {
 
   Widget get horizontalPadding {
     return Builder(builder: (context) {
-      final mediaQuery = context.mediaQuery;
+      final screenSize = context.screenSize;
       return Padding(
-        padding: mediaQuery.horizontalPadding,
+        padding: screenSize.horizontalPadding,
         child: this,
       );
     });
@@ -26,9 +26,9 @@ extension PaddingExt on Widget {
 
   Widget get padding {
     return Builder(builder: (context) {
-      final mediaQuery = context.mediaQuery;
+      final screenSize = context.screenSize;
       return Padding(
-        padding: mediaQuery.widgetPadding,
+        padding: screenSize.widgetPadding,
         child: this,
       );
     });

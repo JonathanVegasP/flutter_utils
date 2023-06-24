@@ -201,13 +201,8 @@ ThemeData generateTheme({
       backgroundColor: primary,
       iconTheme: appBarIconTheme,
       actionsIconTheme: appBarIconTheme,
+      surfaceTintColor: surface,
     ),
-    bottomNavigationBarTheme: BottomNavigationBarThemeData(
-      backgroundColor: primary,
-      selectedItemColor: secondary,
-      unselectedItemColor: surface,
-    ),
-    bottomAppBarTheme: BottomAppBarTheme(color: primary),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         minimumSize: minimumButtonSize,

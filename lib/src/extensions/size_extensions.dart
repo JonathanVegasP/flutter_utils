@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 
-extension MediaQueryDataExt on MediaQueryData {
-  bool get isCompact => size.width < 600;
+extension SizeExt on Size {
+  bool get isCompact => width < 600;
 
-  bool get isMedium => size.width > 599;
+  bool get isMedium => width > 599;
 
-  bool get isExpanded => size.width > 839;
+  bool get isExpanded => width > 839;
 
   Widget get verticalMargin {
     return switch (isCompact) {

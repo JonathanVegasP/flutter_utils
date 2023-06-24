@@ -1,24 +1,24 @@
 import 'package:flutter/widgets.dart';
 
 import 'build_context_extensions.dart';
-import 'media_query_data_extensions.dart';
+import 'size_extensions.dart';
 
 extension MarginExtension<T> on T {
   Widget verticalMargin() {
     return Builder(builder: (context) {
-      return context.mediaQuery.verticalMargin;
+      return context.screenSize.verticalMargin;
     });
   }
 
   Widget horizontalMargin() {
     return Builder(builder: (context) {
-      return context.mediaQuery.horizontalMargin;
+      return context.screenSize.horizontalMargin;
     });
   }
 
   Widget dividerWidget() {
     return Builder(builder: (context) {
-      return context.mediaQuery.divider;
+      return context.screenSize.divider;
     });
   }
 }
